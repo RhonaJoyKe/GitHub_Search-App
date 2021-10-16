@@ -8,20 +8,21 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class UsrepodataService {
-  getuserdetails:User;
-  getrepodetails:Repos;
+  gottenUserdetails:User;
+  gottenReporepodetails:Repos;
 
   constructor(private http:HttpClient) {
-    this.getuserdetails=new User(
+    this.gottenUserdetails=new User(
 
       "","","","","",0,0
     )
-    this.getrepodetails=new Repos(
+    this. gottenReporepodetails=new Repos(
 
       "","","","",
     )
    
    }
+   //Api request to getting User Details
    fetchUserRequest(ghubUsername: string){
      interface ApiUserResponse{
        name: string,
@@ -46,7 +47,7 @@ export class UsrepodataService {
         .toPromise()
         .then(
           (response) => {
-            this.getuserdetails = response;
+            this.gottenUserdetails = response;
             resolve();
           },
           (error) => {
@@ -57,7 +58,8 @@ export class UsrepodataService {
     );
     return userPromise;
   }
-  getUserRepositoryRequest(ghubUsername: any) {
+  ////Api request to getting Repo Details
+  fetchUserRepositoryRequest(ghubUsername: any) {
     // the interface
     interface ApiUserRepositoryResponse {
        name: string,
@@ -78,7 +80,7 @@ export class UsrepodataService {
         .toPromise()
         .then(
           (response) => {
-            this.getrepodetails = response;
+            this. gottenReporepodetails = response;
             resolve();
           },
           (error) => {
