@@ -37,7 +37,7 @@ export class UsrepodataService {
      let userPromise = new Promise<void>((resolve, reject) =>
       this.http
         .get<ApiUserResponse>(
-          environment.apiKey +
+          environment.baseUrl +
             '/' +
             ghubUsername +
             '?access_token=' +
@@ -57,5 +57,37 @@ export class UsrepodataService {
     );
     return userPromise;
   }
+  getUserRepositoryRequest(ghubUsername: any) {
+    // the interface
+    interface ApiUserRepositoryResponse {
+       name: string,
+     html_url: string,
+     description: string,
+     language?: string;
+    }
 
-}
+    let userRepoPromise = new Promise<void>((resolve, reject) => {
+      this.http
+        .get<ApiUserRepositoryResponse>(
+          environment.baseUrl +
+            '/' +
+            ghubUsername +
+            '/repos?sort=created&direction=desc?access_token=' +
+            environment.apiKey
+        )
+        .toPromise()
+        .then(
+          (response) => {
+            this.getrepodetails = response;
+            resolve();
+          },
+          (error) => {
+            reject(error);
+            console.log(error);
+          }
+        );
+    });
+    return userRepoPromise;
+  }  
+} 
+
