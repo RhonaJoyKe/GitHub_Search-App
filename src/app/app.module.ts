@@ -9,6 +9,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { UserComponent } from './user/user.component';
 import { RepositoryComponent } from './repository/repository.component';
 import { HomeComponent } from './home/home.component';
+import { ColorsDirective } from './colors.directive';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HomeComponent } from './home/home.component';
     NavbarComponent,
     UserComponent,
     RepositoryComponent,
-    HomeComponent
+    HomeComponent,
+    ColorsDirective
   ],
   imports: [
     BrowserModule,
