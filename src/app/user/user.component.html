@@ -1,8 +1,9 @@
-<form  #quoteForm='ngForm'>
-    <!-- (ngSubmit)='submitQuote()' -->
+<form  #userForm='ngForm'>
+  <!-- (ngSubmit) 'searchUser()' -->
+    
     <div class="formgroup">
-        <input class="form-control me-2" type="search"name="search" placeholder="Enter Github UserName..." aria-label="Search" required><br>
-        <!-- #search='ngModel'  -->
+        <input class="form-control me-2" type="search" name="search" ngModel #search='ngModel'placeholder="Enter Github UserName..." aria-label="Search" required><br>
+        [(ngModel)]="newGoal.name" name="name" 
         <!-- <div [hidden]="search.valid || search.pristine" class="alert alert-danger">
             <p>Author is required</p>
           </div>
@@ -11,3 +12,12 @@
     <button class="btn btn-outline-success" id="submit" type="submit">Search</button>
    
   </form>
+  <!-- <form (ngSubmit)="searchUser()" #j="ngForm" >
+    <div class="container">
+        <div class="col-md-4">
+            <input class="form-control form-control-lg" type="text" name="search" ngModel #search="ngModel" placeholder="Username" aria-label=".form-control-lg example">
+            <input class="btn btn-primary" type="submit" value="search..." >
+        </div>
+
+    </div>
+</form> -->

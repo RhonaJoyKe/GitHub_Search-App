@@ -1,13 +1,13 @@
-<form  #quoteForm='ngForm'>
-    <!-- (ngSubmit)='submitQuote()' -->
+<form   #repoForm='ngForm'>
+  <!-- (ngSubmit)='submitQuote() -->
     <div class="formgroup">
-        <input class="form-control me-2" type="search"name="search" placeholder="Enter repository name..." aria-label="Search" required><br>
-        <!-- #search='ngModel'  -->
-        <!-- <div [hidden]="search.valid || search.pristine" class="alert alert-danger">
-            <p>Author is required</p>
+        <input class="form-control me-2" type="search"  placeholder="Enter repository name..." aria-label="Search" required><br>
+        <!-- name="search" #search='ngModel'  -->
+         <!-- <div [hidden]="search.valid || search.pristine" class="alert alert-danger">
+            <p>Repo Name is required</p>
           </div>
-         -->
+          -->
     </div>
     <button class="btn btn-outline-success" id="submit" type="submit">Search</button>
    
-  </form>
+  

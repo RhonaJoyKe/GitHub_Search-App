@@ -27,7 +27,7 @@ export class UsrepodataService {
      interface ApiUserResponse{
        name: string,
        username: string,
-       avatarurl: string,
+       avatar_url: string,
        location: string,
        bio: string,
         followers: number,
@@ -41,7 +41,7 @@ export class UsrepodataService {
           environment.baseUrl +
             '/' +
             ghubUsername +
-            '?access_token=' +
+            '??access_token=' +
             environment.apiKey
         )
         .toPromise()
@@ -49,6 +49,7 @@ export class UsrepodataService {
           (response) => {
             this.gottenUserdetails = response;
             resolve();
+            console.log()
           },
           (error) => {
             reject(error);
@@ -82,6 +83,7 @@ export class UsrepodataService {
           (response) => {
             this. gottenReporepodetails = response;
             resolve();
+            
           },
           (error) => {
             reject(error);

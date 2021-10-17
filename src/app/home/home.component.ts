@@ -10,8 +10,8 @@ import { Repos } from '../classes/repository/repos';
 })
 export class HomeComponent implements OnInit {
 
-  userDetails!: User
-  userRepositories!: Repos;
+  userDetails !: User 
+ userRepositories!: Repos;
   constructor(private usrepodataService: UsrepodataService) {}
 
   ngOnInit(): void {
@@ -24,6 +24,7 @@ export class HomeComponent implements OnInit {
     this.usrepodataService.fetchUserRequest(ghubUsername).then(
       (response) => {
         this.userDetails = this.usrepodataService.gottenUserdetails;
+        console.log(this.userDetails);
       },
       (error) => {
         console.log(error);
