@@ -1,10 +1,11 @@
 <div class="container">
     <div class="row">
         <div class="col-md-4">
-            <div class="card">
+            <div class="card"appColors>
                 <img [src]="userDetails?.avatar_url" class="card-img-top" alt="My profile picture">
                 <div class="card-body text-center">
-                  <h4 class="card-text">{{ userDetails?.name }}</h4>
+                  <h4 class="card-text" >{{ userDetails?.name }}</h4>
+                  <p >{{ userDetails?.username }}</p>
                   <p>{{ userDetails?.location }}</p>
                   
                   <div class="d-flex justify-content-evenly">

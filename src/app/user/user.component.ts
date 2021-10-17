@@ -9,24 +9,35 @@ import { UsrepodataService } from '../services/usrepodata/usrepodata.service';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
-  @ViewChild('userForm') searchUserForm: NgForm
+  @ViewChild('userForm') userFormSearch: NgForm
+  pro:string;
+  userDeets:User;
+  constructor(private userservice: UsrepodataService) {}
 
-  constructor() { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
+  // captures user input
+  searchUser(){
+    this.pro=this.userFormSearch.value.search;
+    this.userservice.fetchUserRepositoryRequest(this.pro).then(
+      (response) => {
+        this.userDeets = this.userservice.gottenUserdetails;
+    //     this.displayUserDetailContainer = true;
+    console.log(this.userDeets);
+    // },
+      },
+    (error) => {
+      console.log(error);
+      // this.displayGithubUserErrorNotFound = true;
+    }
+  );
+
+
   }
 
+ 
 }
-// import { Component,  NgModule,  OnInit, ViewChild } from '@angular/core';
-// import { NgForm } from '@angular/forms';
-// import { User } from '../homeclasses/user';
-// import { ProfileServiceService } from '../services/profile-service.service';
 
-// @Component({
-//   selector: 'app-profile',
-//   templateUrl: './profile.component.html',
-//   styleUrls: ['./profile.component.css']
-// })
 // export class ProfileComponent implements OnInit {
 //   @ViewChild('j') searchUserForm: NgForm
 //   profile:string;
