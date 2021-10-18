@@ -20,7 +20,7 @@ npm install
 ```
 * And the following to run development server
 ```
-ng serve
+ng serve -o
 ```
 * open the browser and navigate to http://localhost:4200/ to see the application in action
 ## Technologies Used

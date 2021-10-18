@@ -26,7 +26,7 @@ export class UsrepodataService {
    fetchUserRequest(ghubUsername: string){
      interface ApiUserResponse{
        name: string,
-       username: string,
+       login: string,
        avatar_url: string,
        location: string,
        bio: string,

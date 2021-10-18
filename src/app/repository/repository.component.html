@@ -1,13 +1,27 @@
-<form   #repoForm='ngForm'>
-  <!-- (ngSubmit)='submitQuote() -->
-    <div class="formgroup">
-        <input class="form-control me-2" type="search"  placeholder="Enter repository name..." aria-label="Search" required><br>
-        <!-- name="search" #search='ngModel'  -->
-         <!-- <div [hidden]="search.valid || search.pristine" class="alert alert-danger">
-            <p>Repo Name is required</p>
+<form (ngSubmit) ='searchRepo()' #repoForm='ngForm'>
+
+    
+  <div class="formgroup">
+      <input class="form-control me-2" type="search" name="search" ngModel #search='ngModel'placeholder="Enter Repo Name..." aria-label="Search" required><br>
+      
+       <div [hidden]="search.valid || search.pristine" class="alert alert-danger">
+          <p>Repo Name  is required</p>
+        </div>
+       
+  </div>
+  <button class="btn btn-outline-success" id="submit" type="submit">Search</button>
+ 
+</form>
+<div class="container" >
+  <div class="row">
+      <div class="col-md-6">
+          <div class="card" >
+              <p>
+                  {{repoDeets.name}} 
+              </p>
+              <!-- <img src=[{{userData?.avatar_url}}] alt=""> -->
+              <!-- <img [src]="userDeets?.avatar_url" class="card-img-top" alt="My profile picture"> -->
           </div>
-          -->
-    </div>
-    <button class="btn btn-outline-success" id="submit" type="submit">Search</button>
-   
-  
+      </div>
+  </div>
+</div>

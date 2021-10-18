@@ -25,13 +25,14 @@ export class UserComponent implements OnInit {
     //     this.displayUserDetailContainer = true;
     console.log(this.userDeets);
     // },
+    
       },
     (error) => {
       console.log(error);
       // this.displayGithubUserErrorNotFound = true;
     }
-  );
-
+  
+    );
 
   }
 

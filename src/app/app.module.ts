@@ -10,6 +10,7 @@ import { UserComponent } from './user/user.component';
 import { RepositoryComponent } from './repository/repository.component';
 import { HomeComponent } from './home/home.component';
 import { ColorsDirective } from './colors.directive';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ColorsDirective } from './colors.directive';
     UserComponent,
     RepositoryComponent,
     HomeComponent,
-    ColorsDirective
+    ColorsDirective,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
