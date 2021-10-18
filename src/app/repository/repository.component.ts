@@ -13,6 +13,9 @@ export class RepositoryComponent implements OnInit {
   @ViewChild('repoForm') repoFormSearch: NgForm
   pro:string;
   repoDeets;
+  showDeets=false;
+  GithubUserNotFound = false;
+
   constructor(private reposervice: UsrepodataService) {}
 
   ngOnInit(): void {}
@@ -23,14 +26,14 @@ export class RepositoryComponent implements OnInit {
     this.reposervice.fetchUserRepositoryRequest(this.pro).then(
       (response) => {
         this.repoDeets = this.reposervice.gottenReporepodetails;
-    //     this.displayUserDetailContainer = true;
+         this.showDeets = true;
     console.log(this.repoDeets);
-    // },
+    
     
       },
     (error) => {
       console.log(error);
-      // this.displayGithubUserErrorNotFound = true;
+      this.GithubUserNotFound = true;
     }
   
     );

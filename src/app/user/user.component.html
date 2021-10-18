@@ -14,11 +14,11 @@
   </form>
   
   <div class="container" >
-    <div class="row">
+    <div class="row" appColors>
         <div class="col-md-4"></div>
         
-        <div class="col-md-4" *ngIf="showDeets">
-            <div class="card mt-5" style="width: 22rem">
+        <div class="col-md-4" id ="usercard"*ngIf="showDeets">
+            <div class="card mt-3" style="width: 22rem">
                 <img [src]="userDeets?.avatar_url" class="card-img-top" alt="My profile picture">
                 <div class="card-body text-center">
                   <h4 class="card-text" ><b>{{ userDeets?.name }} </b></h4>
@@ -39,5 +39,14 @@
         </div>
       </div>
       <div class="col-md-4"></div>
+      <div class="row homepage" *ngIf="!showDeets && GithubUserNotFound">
+        <div class="col-md-4"></div>
+        <div class="col-md-4 mt-4">
+          <div class="card">
+            <div class="alert alert-danger" role="alert">Github user was not found! Please type a valid Github User Name</div>
+          </div>
+        </div>
+      </div>
+  
       <app-footer></app-footer>
 </div>

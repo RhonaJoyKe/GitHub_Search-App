@@ -1,6 +1,7 @@
-.container{
-   
-    box-shadow:  gray 5px 10px 5px 10px;
+#cardrepo{
+    margin-top: 10px;
+    background-color: tomato;
+    margin-bottom: 10px;
 }
 .formgroup{
     padding-top: 40px;

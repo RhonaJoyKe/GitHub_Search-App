@@ -13,6 +13,7 @@ export class UserComponent implements OnInit {
   pro:string;
   userDeets:User;
   showDeets=false;
+  GithubUserNotFound = false;
   constructor(private userservice: UsrepodataService) {}
 
   ngOnInit(): void {}
@@ -25,14 +26,13 @@ export class UserComponent implements OnInit {
         this.userDeets = this.userservice.gottenUserdetails;
        
        this.showDeets=true;
-    //     this.displayUserDetailContainer = true;
     
-    // },
+    
     
       },
     (error) => {
       console.log(error);
-      // this.displayGithubUserErrorNotFound = true;
+      this.GithubUserNotFound = true;
     }
   
     );

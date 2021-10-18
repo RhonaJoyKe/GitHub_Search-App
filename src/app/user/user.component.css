@@ -1,3 +1,4 @@
+
 .formgroup{
     padding-top: 40px;
     width:60%;
@@ -5,5 +6,6 @@
 }
 #submit{
     margin-left: 32%;
-    width:15%
+    width:15%;
+    margin-bottom: 10px;
 }
