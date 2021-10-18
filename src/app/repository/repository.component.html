@@ -14,10 +14,10 @@
     <button class="btn btn-outline-success" id="submit" type="submit">Search</button>
    
   </form>
-  <div class="container" *ngIf="showDeets" *ngFor ="let repos of repoDeets" >
+  <div class="container" *ngIf="showDeets"  >
     <div class="row">
       <div class="col-md-12">
-        <div class="card card-repo-mt3" id="cardrepo" appColors>
+        <div class="card card-repo-mt3"*ngFor ="let repos of repoDeets" id="cardrepo" appColors>
                     
           <div class="card-body text-center">
             <h5 class="card-title heading"> {{ repos.name}} </h5>
@@ -35,6 +35,14 @@
        
     </div>
     
+</div>
+<div class="row homepage" *ngIf="!showDeets && GithubUserNotFound">
+  <div class="col-md-4"></div>
+  <div class="col-md-4 mt-4">
+    <div class="card">
+      <div class="alert alert-danger" role="alert">Github user was not found! Please type a valid Github User Name</div>
+    </div>
+  </div>
 </div>
 <app-footer></app-footer>
 

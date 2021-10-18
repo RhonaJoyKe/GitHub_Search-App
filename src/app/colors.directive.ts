@@ -8,14 +8,14 @@ export class ColorsDirective {
   constructor(private el: ElementRef) { }
 
   @HostListener('mouseenter') onMouseEnter() {
-    this.highlight('purple');
+    this.hover('purple');
   }
 
   @HostListener('mouseleave') onMouseLeave() {
-    this.highlight('');
+    this.hover('');
   }
 
-  private highlight(color: string) {
+  private hover(color: string) {
     this.el.nativeElement.style.backgroundColor = color;
   }
   }

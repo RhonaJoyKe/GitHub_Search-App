@@ -11,6 +11,7 @@ import { RepositoryComponent } from './repository/repository.component';
 import { HomeComponent } from './home/home.component';
 import { ColorsDirective } from './colors.directive';
 import { FooterComponent } from './footer/footer.component';
+import { DayscountPipe } from './dayscount.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FooterComponent } from './footer/footer.component';
     RepositoryComponent,
     HomeComponent,
     ColorsDirective,
-    FooterComponent
+    FooterComponent,
+    DayscountPipe
   ],
   imports: [
     BrowserModule,
