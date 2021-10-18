@@ -12,16 +12,16 @@ export class UserComponent implements OnInit {
   @ViewChild('userForm') userFormSearch: NgForm
   pro:string;
   userDeets:User;
-  showDeets=false;
-  GithubUserNotFound = false;
+  showDeets=false;// used to hide the card before the user has clicked on search
+  GithubUserNotFound = false; //used to display error message if user was not found
   constructor(private userservice: UsrepodataService) {}
 
   ngOnInit(): void {}
 
-  // captures user input
+  
   searchUser(){
-    this.pro=this.userFormSearch.value.search;
-    this.userservice.fetchUserRequest(this.pro).then(
+    this.pro=this.userFormSearch.value.search;//captures user input
+    this.userservice.fetchUserRequest(this.pro).then( 
       (response) => {
         this.userDeets = this.userservice.gottenUserdetails;
        
@@ -42,33 +42,3 @@ export class UserComponent implements OnInit {
  
 }
 
-// export class ProfileComponent implements OnInit {
-//   @ViewChild('j') searchUserForm: NgForm
-//   profile:string;
-//   userData: User;
-
-//   displayUser=false;
-
-//   searchUser(){
-//     this.profile=this.searchUserForm.value.search;
-//     console.log(this.profile)
-
-//     this.requestProfile.getUserDataRequest(this.profile).then(
-//       (response)=>{
-//         this.userData = this.requestProfile.userInfor;
-//         console.log(this.userData);
-//       },
-//       (error) => {
-//         console.log(error);
-//       }
-//     );
-//     this.displayUser=true;
-//   }
-
-//     constructor(private requestProfile : ProfileServiceService ) {}
-
-
-//   ngOnInit(): void {
-//   }
-
-// }
