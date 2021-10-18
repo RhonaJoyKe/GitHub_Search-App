@@ -12,7 +12,7 @@ import { UsrepodataService } from '../services/usrepodata/usrepodata.service';
 export class RepositoryComponent implements OnInit {
   @ViewChild('repoForm') repoFormSearch: NgForm
   pro:string;
-  repoDeets:Repos;
+  repoDeets;
   constructor(private reposervice: UsrepodataService) {}
 
   ngOnInit(): void {}

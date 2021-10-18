@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container mt-3">
   
   <form (ngSubmit) ='searchRepo()' #repoForm='ngForm'>
 
@@ -14,13 +14,12 @@
     <button class="btn btn-outline-success" id="submit" type="submit">Search</button>
    
   </form>
-  <div class="container" >
+  <div class="container" *ngFor ="let repos of repoDeets" >
     <div class="row">
         <div class="col-md-6">
             <div class="card" >
-                <p>
-                    {{repoDeets.name}} 
-                </p>
+              
+                    {{repos?.name}}
                 <!-- <img src=[{{userData?.avatar_url}}] alt=""> -->
                 <!-- <img [src]="userDeets?.avatar_url" class="card-img-top" alt="My profile picture"> -->
             </div>

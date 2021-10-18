@@ -1,3 +1,7 @@
+.container{
+   
+    box-shadow:  gray 5px 10px 5px 10px;
+}
 .formgroup{
     padding-top: 40px;
     width:60%;

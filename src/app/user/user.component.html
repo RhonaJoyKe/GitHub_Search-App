@@ -14,15 +14,24 @@
   </form>
   
   <div class="container" >
-    <div class="row">
-        <div class="col-md-6">
-            <div class="card" >
-                <p>
-                    {{userDeets?.login}} 
-                </p>
-                <!-- <img src=[{{userData?.avatar_url}}] alt=""> -->
-                <!-- <img [src]="userDeets?.avatar_url" class="card-img-top" alt="My profile picture"> -->
-            </div>
+    <div class="col-md-4">
+            <div class="card mt-5" style="width: 22rem">
+                <img [src]="userDeets?.avatar_url" class="card-img-top" alt="My profile picture">
+                <div class="card-body text-center">
+                  <h4 class="card-text" ><b>{{ userDeets?.name }} </b></h4>
+                  <p ><b>{{ userDeets?.login }}</b></p>
+                  <p ><b>{{ userDeets?.bio }}</b></p>
+                  <p><b>{{ userDeets?.location }}</b></p>
+                  
+                  <div class="d-flex justify-content-evenly">
+                    <div>
+                      <p> <i class="fa fa-user"></i> {{ userDeets?.followers }} followers</p>
+                    </div>
+                    <div>
+                      <p> <i class="fa fa-user"></i> {{ userDeets?.following }} followers</p>
+                    </div>
+                    </div>
+                </div>
+             </div>
         </div>
-    </div>
 </div>

@@ -19,9 +19,10 @@ export class UserComponent implements OnInit {
   // captures user input
   searchUser(){
     this.pro=this.userFormSearch.value.search;
-    this.userservice.fetchUserRepositoryRequest(this.pro).then(
+    this.userservice.fetchUserRequest(this.pro).then(
       (response) => {
         this.userDeets = this.userservice.gottenUserdetails;
+        console.log(this.pro)
     //     this.displayUserDetailContainer = true;
     console.log(this.userDeets);
     // },
