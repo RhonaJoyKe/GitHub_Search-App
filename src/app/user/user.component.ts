@@ -12,6 +12,7 @@ export class UserComponent implements OnInit {
   @ViewChild('userForm') userFormSearch: NgForm
   pro:string;
   userDeets:User;
+  showDeets=false;
   constructor(private userservice: UsrepodataService) {}
 
   ngOnInit(): void {}
@@ -22,9 +23,10 @@ export class UserComponent implements OnInit {
     this.userservice.fetchUserRequest(this.pro).then(
       (response) => {
         this.userDeets = this.userservice.gottenUserdetails;
-        console.log(this.pro)
+       
+       this.showDeets=true;
     //     this.displayUserDetailContainer = true;
-    console.log(this.userDeets);
+    
     // },
     
       },
