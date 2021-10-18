@@ -1,13 +1,13 @@
 <div class="container">
     <div class="row">
         <div class="col-md-4">
-            <div class="card -mt3">
+            <div class="card -mt3" style="width: 22rem">
                 <img [src]="userDetails?.avatar_url" class="card-img-top" alt="My profile picture">
                 <div class="card-body text-center">
-                  <h4 class="card-text" >{{ userDetails?.name }}</h4>
-                  <p >{{ userDetails?.login }}</p>
-                  <p >{{ userDetails?.bio }}</p>
-                  <p>{{ userDetails?.location }}</p>
+                  <h4 class="card-text" ><b>{{ userDetails?.name }} </b></h4>
+                  <p ><b>{{ userDetails?.login }}</b></p>
+                  <p ><b>{{ userDetails?.bio }}</b></p>
+                  <p><b>{{ userDetails?.location }}</b></p>
                   
                   <div class="d-flex justify-content-evenly">
                     <div>
@@ -44,5 +44,14 @@
                 </div>
               </div>
         </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <app-footer></app-footer>
+      </div>
+      
+    </div>
+    
+</div>
             
 
