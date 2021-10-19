@@ -34,7 +34,7 @@ ng serve -o
  <a href="https://rhonajoyke.github.io/GitHub_Search-App/">View GitHub Search App</a>
 
 ## Screenshot
-<img src="GitSearchApp/src/assets/images/gitsearchapp.png">
+<img src="src/assets/images/gitsearchapp.png">
 
 ## Known Bugs
  So far so good there are no bugs related to this project 😎
