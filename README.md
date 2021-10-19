@@ -33,8 +33,8 @@ ng serve -o
 ## Live link to view the project
  <a href="https://rhonajoyke.github.io/GitHub_Search-App/">View GitHub Search App</a>
 
-## Screenshot
-<img src="src/assets/images/gitsearchapp.png">
+## Screenshot of webapp
+<img src="src/assets/images/gitsearchapp .png">
 
 ## Known Bugs
  So far so good there are no bugs related to this project 😎
