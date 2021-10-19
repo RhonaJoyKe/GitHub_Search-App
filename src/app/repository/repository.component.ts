@@ -15,31 +15,32 @@ export class RepositoryComponent implements OnInit {
   repoDeets;
   showDeets=false;
   GithubUserNotFound = false;
+    // captures user input
+    searchRepo(){
+      this.pro=this.repoFormSearch.value.search;
+      this.reposervice.fetchUserRepositoryRequest(this.pro).then(
+        (response) => {
+          this.repoDeets = this.reposervice.gottenReporepodetails;
+           this.showDeets = true;
+      console.log(this.repoDeets);
+      
+      
+        },
+      (error) => {
+        console.log(error);
+        this.GithubUserNotFound = true;
+      }
+    
+      );
+  
+    
+  
+  
+    }
 
   constructor(private reposervice: UsrepodataService) {}
 
   ngOnInit(): void {}
 
-  // captures user input
-  searchRepo(){
-    this.pro=this.repoFormSearch.value.search;
-    this.reposervice.fetchUserRepositoryRequest(this.pro).then(
-      (response) => {
-        this.repoDeets = this.reposervice.gottenReporepodetails;
-         this.showDeets = true;
-    console.log(this.repoDeets);
-    
-    
-      },
-    (error) => {
-      console.log(error);
-      this.GithubUserNotFound = true;
-    }
-  
-    );
 
-  
-
-
-  }
 }

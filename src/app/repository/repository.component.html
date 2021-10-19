@@ -14,15 +14,14 @@
     <button class="btn btn-outline-success" id="submit" type="submit">Search</button>
    
   </form>
-  <div class="container" *ngIf="showDeets"  >
+  <div class="container"  >
     <div class="row">
       <div class="col-md-12">
-        <div class="card card-repo-mt3"*ngFor ="let repos of repoDeets" id="cardrepo" appColors>
+        <div class="card card-repo-mt3"  *ngFor ="let repos of repoDeets" id="cardrepo" appColors>
                     
-          <div class="card-body text-center">
+          <div class="card-body text-center" >
             <h5 class="card-title heading"> {{ repos.name}} </h5>
-            <p class="card-text mt-1">{{ repos.description ? (repository.description | slice: 0: 90) : 'No repository
-              description' }} ...</p>
+            <p class="card-text mt-1">{{ repos.description}}</p>
           </div>
           <div class="card-body text-center">
             <p class="card-text"><strong>Created on: <span class="badge rounded-pill bg-warning text-dark">{{
