@@ -5,6 +5,12 @@ import { UserComponent } from './user/user.component';
 import { RepositoryComponent } from './repository/repository.component';
 
 const routes: Routes = [
+  {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'home'
+  },
+  
   { path: 'user', component: UserComponent},
   { path: 'repository', component: RepositoryComponent},
   { path: 'home', component: HomeComponent},
