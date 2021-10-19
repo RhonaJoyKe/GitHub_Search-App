@@ -32,7 +32,11 @@ ng serve -o
  * Typescript
 ## Live link to view the project
  <a href="https://rhonajoyke.github.io/GitHub_Search-App/">View GitHub Search App</a>
- ## Known Bugs
+
+## Screenshot
+<img src="GitSearchApp/src/assets/images/gitsearchapp.png">
+
+## Known Bugs
  So far so good there are no bugs related to this project 😎
 ## Support and contact details 🙂
 To make a contribution to the code used or any suggestions you can click on the contact link and email me your suggestions.
